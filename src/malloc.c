@@ -115,7 +115,7 @@ struct _block *findFreeBlock(struct _block **last, size_t size)
       struct _block *worst = NULL;
       while(curr)
       {
-         if(curr->free && curr->size >= size && (worst == NULL || curr->size < worst->size))
+         if(curr->free && curr->size >= size && (worst == NULL || curr->size > worst->size))
          {
             worst = curr;
          }
